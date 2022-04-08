@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import Logo from "../components/Logo"
+import NavBar from "../components/NavBar"
 import SunnyVideo from "../components/SunnyVideo"
 
 const Section = styled.section`
@@ -14,6 +15,7 @@ const Home = () => {
         <Section>
             <SunnyVideo />
             <Logo />
+            <NavBar />
         </Section>
     )
 }

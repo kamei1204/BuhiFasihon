@@ -5,7 +5,7 @@ import SunnyVideo from "../components/SunnyVideo"
 
 const Section = styled.section`
     position: relative;
-    min-height: 300vh;
+    min-height: 100vh;
     overflow: hidden;
     color: white;
 `

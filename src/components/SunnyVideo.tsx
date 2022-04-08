@@ -92,7 +92,7 @@ const SunnyVideo = () => {
                     <motion.h1 variants={item} data-scroll data-scroll-delay="0.06" data-scroll-speed="4">h</motion.h1>
                     <motion.h1 variants={item} data-scroll data-scroll-delay="0.04" data-scroll-speed="4">i</motion.h1>
                 </div>
-                <h2 data-scroll data-scroll-delay="0.04" data-scroll-speed="2">french. pug. boston</h2>
+                <motion.h2 variants={item} data-scroll data-scroll-delay="0.04" data-scroll-speed="2">french. pug. boston</motion.h2>
             </Title>
             <video src={MainVideo}  autoPlay muted loop/>
             

@@ -56,9 +56,9 @@ const Right = styled.div`
 `
 const About = () => {
     return (
-        <Section>
+        <Section >
             {/* JavaScriptライブラリ「Locomotive Scroll」 */}
-            <Title data-scroll data-scroll-speed="-2" data-scroll-direction="horizontal">section</Title>
+            <Title data-scroll data-scroll-speed="-0.8" data-scroll-direction="Vertical" >section</Title>
             <Left>
             フレンチブルドッグに服を着せるメリットとして、冬の寒さや夏の強い日差しから身を守ることが挙げられます。近頃では、背中部分に保冷剤ポケットのついた夏服や浴衣など、クール効果の高いフレブル服も人気を集めているようです。
 

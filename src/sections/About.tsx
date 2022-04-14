@@ -50,7 +50,7 @@ const Right = styled.div`
         bottom: 20%;
     }
     .small-2 {
-        width: 25%;
+        width: 20%;
         position: absolute;
         left: 80%;
         bottom: 10%;

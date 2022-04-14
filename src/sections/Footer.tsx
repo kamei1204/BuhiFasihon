@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"
 import { useLocomotiveScroll } from "react-locomotive-scroll"
 import styled from "styled-components"
-import Logo from "../assets/images/icons8-スター-64 (2).png"
+import Logo from "../assets/images/img16.jpg"
 
 const Section = styled.section`
     min-height: 100vh;

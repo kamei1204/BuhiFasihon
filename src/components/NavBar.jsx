@@ -90,7 +90,7 @@ const NavBar = () => {
             }}
             transition={{
                 duration: 2,
-                delay: 2
+                delay: 5
             }}
             >
             <MenuItems 

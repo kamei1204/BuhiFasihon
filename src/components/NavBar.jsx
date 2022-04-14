@@ -1,5 +1,6 @@
 import { motion } from "framer-motion"
 import { useState } from "react"
+import { useLocomotiveScroll } from "react-locomotive-scroll"
 import styled from "styled-components"
 
 const NavContainer = styled(motion.div)`
@@ -64,6 +65,19 @@ const Item = styled(motion.li)`
 
 const NavBar = () => {
 
+    const {scroll} = useLocomotiveScroll();
+
+    const handleScroll = (id) => {
+        let element = document.querySelector(id);
+        setClick(!click);
+        // scrollToは指定した位置にスクロールして移動することができるメソッド
+        scroll.scrollTo(element, {
+            offSet: "-200",
+            duration: "2000",
+            easing: [0.25,0.0,0.35,1.0]
+        })
+    }
+
     const [click, setClick] = useState(false)
     return (
         <NavContainer 
@@ -89,19 +103,19 @@ const NavBar = () => {
                 dragSnapToOrigin
             >
                 <Menu onClick={() => setClick(!click)}>menu</Menu>
-                <Item
+                <Item onClick={() => handleScroll("#home")}
                     whileHover={{scale:1.1, y: -5}}
                     whileTap={{scale: 0.9, y: 0}}
                 >home</Item>
-                <Item
+                <Item onClick={() => handleScroll("#about")}
                     whileHover={{scale:1.1, y: -5}}
                     whileTap={{scale: 0.9, y: 0}}
                 >about</Item>
-                <Item
+                <Item onClick={() => handleScroll("#shop")}
                     whileHover={{scale:1.1, y: -5}}
                     whileTap={{scale: 0.9, y: 0}}
                 >shop</Item>
-                <Item
+                <Item onClick={() => handleScroll("#new-arrival")}
                     whileHover={{scale:1.1, y: -5}}
                     whileTap={{scale: 0.9, y: 0}}
                 >new arrival</Item>

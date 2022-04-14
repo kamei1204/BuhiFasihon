@@ -22,7 +22,7 @@ const Container = styled.div`
 `
 
 const BannerComponent = styled.h1`
-    font-size: ${ props=> props.theme.font3xl };
+    font-size: ${ props=> props.theme.font2xl };
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     white-space: nowrap;
     color: white;

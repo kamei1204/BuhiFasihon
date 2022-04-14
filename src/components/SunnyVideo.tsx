@@ -21,7 +21,7 @@ const DarkOverlay = styled.div`
     left: 0;
     z-index: 1;
 
-    background-color: ${props => `rgba(${props.theme.bodyRgba},0.7)`};
+    background-color: ${props => `rgba(${props.theme.bodyRgba},0.4)`};
 `
 
 const Title = styled(motion.div)`

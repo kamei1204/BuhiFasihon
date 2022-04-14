@@ -1,3 +1,4 @@
+import { useLocomotiveScroll } from "react-locomotive-scroll"
 import styled from "styled-components"
 import Logo from "../components/Logo"
 import NavBar from "../components/NavBar"
@@ -11,8 +12,9 @@ const Section = styled.section`
 `
 
 const Home = () => {
+
     return (
-        <Section>
+        <Section id="home">
             <SunnyVideo />
             <Logo />
             <NavBar />

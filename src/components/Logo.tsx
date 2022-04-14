@@ -54,7 +54,7 @@ const Logo = () => {
                         <g>
                             <motion.path
                                 initial={{
-                                    opacity: 0,
+                                    opacity: 1,
                                     pathLength: 0,
                                 }}
                                 animate={{

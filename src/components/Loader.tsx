@@ -1,43 +1,60 @@
-import { Link } from "react-router-dom"
 import styled from "styled-components"
 import { motion } from "framer-motion"
 
-const Container = styled.div`
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    z-index: 5;
+const Container = styled(motion.div)`
+    width: 100vw;
+    height: 100vh;
 
-    a {
-        display: flex;
-        align-items: flex-end;
-        
-    }
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: black;
+    color: white;
+
+    z-index: 7;
 
     svg {
-        width: 4rem;
+        width: 10vw;
         height: auto;
         overflow: visible;
     }
 
     g {
         path {
-            stroke: white;
+            stroke: red;
         }
     }
 `
 
-const TextMove = styled(motion.span)`
+const Text = styled(motion.h1)`
+    font-size: 30px;
     color: white;
-    font-size: ${props => props.theme.fontmd};
-    padding-bottom: 0.5rem;
+    margin-top: 20px;
 `
 
-const Logo = () => {
+const Loader = () => {
     return (
-        <Container>
-            <Link to="/">
-                    <svg 
+        <Container
+            initial={{
+                y: 0, opacity: 1,
+            }}
+            exit={{
+                y: "100%", opacity: 0,
+            }}
+            transition={{
+                duration: 2,
+                
+            }}
+        >
+            <svg 
                         xmlns="http://www.w3.org/2000/svg" 
                         enable-background="new 0 0 24 24" 
                         height="48px" 
@@ -54,7 +71,7 @@ const Logo = () => {
                         <g>
                             <motion.path
                                 initial={{
-                                    opacity: 1,
+                                    opacity: 0,
                                     pathLength: 0,
                                 }}
                                 animate={{
@@ -62,32 +79,29 @@ const Logo = () => {
                                     pathLength: 1,
                                 }}
                                 transition={{
-                                    duration: 2,
-                                    delay: 4,
+                                    duration: 1.5,
                                     ease: "easeInOut",
                                 }}
                                 d="M12,17.27L18.18,21l-1.64-7.03L22,9.24l-7.19-0.61L12,2L9.19,8.63L2,9.24l5.46,4.73L5.82,21L12,17.27z"/>
                         </g>
                     </svg>
-                    <TextMove 
+                    <Text
                         initial={{
                             opacity: 0,
-                            x: -50,
+                            
                         }}
                         animate={{
                             opacity: 1,
-                            x: -5,
+                            
                         }}
                         transition={{
                             duration: 2,
-                            delay: 5,
+                            yoyo: Infinity,
                             ease: "easeInOut",
                         }}
-                        >Buhi-Style
-                    </TextMove>
-                </Link>
+                    >Buhi-Style</Text>
         </Container>
     )
 }
 
-export default Logo
+export default Loader

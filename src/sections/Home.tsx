@@ -1,5 +1,5 @@
-import { useLocomotiveScroll } from "react-locomotive-scroll"
 import styled from "styled-components"
+import Loader from "../components/Loader"
 import Logo from "../components/Logo"
 import NavBar from "../components/NavBar"
 import SunnyVideo from "../components/SunnyVideo"

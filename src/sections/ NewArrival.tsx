@@ -173,7 +173,7 @@ const  NewArrival = () => {
     return (
         <Section ref={sRef} id="new-arrival">
             <OverLay />
-            <Title data-scroll data-scroll-speed="-2" data-scroll-direction="vertical">New Arraival</Title>
+            <Title data-scroll data-scroll-speed="-2" data-scroll-direction="vertical">Original</Title>
 
                 <Container ref={scrollingRef}>
                     <Products img={img13} title="xyz" />
@@ -182,7 +182,7 @@ const  NewArrival = () => {
                     <Products img={img13} title="xyz" />
                 </Container>
 
-                <Text data-scroll data-scroll-speed="2">
+                <Text data-scroll data-scroll-speed="-2">
                     <p>
                     オールシーズンに適するシンプルでおしゃれな長袖犬服です。
                     柔らかで肌触り良く、伸縮性と通気性があって快適で動きやすい。

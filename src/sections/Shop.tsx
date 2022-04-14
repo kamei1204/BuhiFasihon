@@ -5,8 +5,9 @@ import { useLayoutEffect, useRef } from "react"
 import styled from "styled-components"
 
 import img1 from "../assets/images/img1.jpg"
-import img2 from "../assets/images/img2.jpg"
-import img3 from "../assets/images/img3.jpg"
+import img4 from "../assets/images/img4.jpg"
+import img9 from "../assets/images/img9.jpg"
+import img8 from "../assets/images/img8.jpg"
 
 const Section = styled.section`
 position: relative;
@@ -36,7 +37,7 @@ const Title = styled.h1`
 `
 
 const Left = styled.div`
-    width: 35%;
+    width: 30%;
     height: auto;
     min-height: 100vh;
     background-color: black;
@@ -60,7 +61,7 @@ const Left = styled.div`
 `
 
 const Right = styled.div`
-    background-color: gray;
+    
     min-height: 100vh;
     position: absolute;
     left: 35%;
@@ -68,7 +69,7 @@ const Right = styled.div`
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding-left: 30%;
+    padding-left: 10%;
 
     h1 {
         width: 5rem;
@@ -77,7 +78,7 @@ const Right = styled.div`
 `
 
 const Item = styled(motion.div)`
-    width: 20rem;
+    width: 30rem;
     margin-right: 6rem;
 
     display: flex;
@@ -170,8 +171,8 @@ const Shop = () => {
     },[])
 
     return (
-    <Section ref={ref}>
-        <Title data-scroll data-scroll-speed="-2" data-scroll-direction="vartical">New Arrivals</Title>
+    <Section ref={ref} id="shop">
+        <Title data-scroll data-scroll-speed="-2" data-scroll-direction="vartical">Collection</Title>
         <Left>
             <p>クレープ生地とは夏の定番素材、楊柳(ようりゅう)生地の事。
 
@@ -184,13 +185,13 @@ const Shop = () => {
         </Left>
         <Right ref={horizontalRef}>
             <Products img={img1} title="xyz" />
-            <Products img={img2} title="boston" />
-            <Products img={img3} title="sunny" />
+            <Products img={img8} title="boston" />
+            <Products img={img9} title="sunny" />
+            <Products img={img8} title="xyz" />
             <Products img={img1} title="xyz" />
-            <Products img={img1} title="xyz" />
-            <Products img={img1} title="xyz" />
-            <Products img={img1} title="xyz" />
-            <Products img={img1} title="xyz" />
+            <Products img={img8} title="xyz" />
+            <Products img={img9} title="xyz" />
+            <Products img={img8} title="xyz" />
             <Products img={img1} title="xyz" />
         </Right>
     </Section>

@@ -70,7 +70,7 @@ const About = () => {
             </Left>
             <Right>
                 <img src={img9} alt=""/>
-                <img data-scroll data-scroll-speed="5" src={img12} alt="" className="small-1"/>
+                <img data-scroll data-scroll-speed="2" src={img12} alt="" className="small-1"/>
                 <img data-scroll data-scroll-speed="-2" src={img11} alt="" className="small-2"/>
             </Right>
         </Section>

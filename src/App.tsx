@@ -1,6 +1,6 @@
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "./styles/GlobalStyle";
-import { dark } from "./styles/Theme";
+import { theme } from "./styles/Theme";
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
 import { useEffect, useRef, useState } from "react";
 import 'locomotive-scroll/dist/locomotive-scroll.css'
@@ -33,7 +33,7 @@ function App() {
     <>
     <GlobalStyles />
       {/* mainTheme */}
-      <ThemeProvider theme={dark}>
+      <ThemeProvider theme={theme}>
           <LocomotiveScrollProvider
             options={
               {

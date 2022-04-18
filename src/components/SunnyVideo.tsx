@@ -3,6 +3,7 @@ import MainVideo from "../assets/sunny.mp4"
 import { motion } from "framer-motion"
 
 const CoverVideo = styled.section`
+
     width: 100%;
     height: 100vh;
     position: relative;
@@ -11,6 +12,16 @@ const CoverVideo = styled.section`
         width: 100%;
         height: 100vh;
         object-fit: cover;
+        
+
+        /* 文字の大きさによって変化する相対単位です。 例えば文字の大きさを10pxにしていたなら、1emは10pxということ */
+        /* @media(max-width: 48em) {
+            object-position: center 10%;
+        }
+    
+        @media(max-width: 30em) {
+            object-position: center 50%;
+        } */
     }
 `
 const DarkOverlay = styled.div`
@@ -22,6 +33,8 @@ const DarkOverlay = styled.div`
     z-index: 1;
 
     background-color: ${props => `rgba(${props.theme.bodyRgba},0.4)`};
+
+    
 `
 
 const Title = styled(motion.div)`
@@ -44,12 +57,17 @@ const Title = styled(motion.div)`
 
     h1 {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: ${props => `${props.theme.font4xl}`};
+        font-size: 200px;
         text-shadow: 1px 1px 1px white;
+
+        @media (max-width: 640px) {
+                font-size: 100px;
+        }
+        
     }
     h2 {
         font-family: Arial, Helvetica, sans-serif;
-        font-size: ${props => `${props.theme.fontlg}`};
+        font-size: ${props => props.theme.fontlg};
         text-shadow: 1px 1px 1px white;
         margin-top: 15px;
 
@@ -82,7 +100,7 @@ const item ={
 
 const SunnyVideo = () => {
     return (
-        <CoverVideo>
+        <CoverVideo >
             <DarkOverlay />
             <Title variants={container} initial="hidden" animate="show">
                 <div>

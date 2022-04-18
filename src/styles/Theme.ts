@@ -1,4 +1,6 @@
-export const dark = {
+import { css, CSSObject, FlattenSimpleInterpolation, SimpleInterpolation } from "styled-components";
+
+export const theme = {
     body: '#202020',
     text: '#fff',
     bodyRgba: '32,32,32',
@@ -19,4 +21,43 @@ export const dark = {
     font4xl: '10em',
 
     navHeight: '5rem',
-}
+
+    base: (
+        base: CSSObject | TemplateStringsArray,
+        ...interpolations: SimpleInterpolation[]
+        ): FlattenSimpleInterpolation => css`
+            ${css(base, ...interpolations)}
+        `,
+        sm: (
+            sm: CSSObject | TemplateStringsArray,
+            ...interpolations: SimpleInterpolation[]
+        ): FlattenSimpleInterpolation => css`
+            @media (min-width: 640px) {
+            ${css(sm, ...interpolations)}
+            }
+        `,
+        md: (
+            md: CSSObject | TemplateStringsArray,
+            ...interpolations: SimpleInterpolation[]
+        ): FlattenSimpleInterpolation => css`
+            @media (min-width: 768px) {
+            ${css(md, ...interpolations)}
+            }
+        `,
+        lg: (
+            lg: CSSObject | TemplateStringsArray,
+            ...interpolations: SimpleInterpolation[]
+        ): FlattenSimpleInterpolation => css`
+            @media (min-width: 1024px) {
+            ${css(lg, ...interpolations)}
+            }
+        `,
+        xl: (
+            xl: CSSObject | TemplateStringsArray,
+            ...interpolations: SimpleInterpolation[]
+        ): FlattenSimpleInterpolation => css`
+            @media (min-width: 1280px) {
+            ${css(xl, ...interpolations)}
+            }
+        `,
+    };
